@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Quizzes: Test 03</title>
+
+    <link rel="stylesheet" href="../base.css">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <a href="../">
+                <svg class="action-button back-button" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+            </a>
+        </div>
+        <div class="logo-container">
+            <span class="logo-text"><small>JS Quizzes #03: </small> Factorial</span>
+        </div>
+        <div class="header-right">
+            <button class="action-button system-pref-button" role="switch" aria-label="light/dark mode">
+                <svg class="system-pref system-pref--dark-mode" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="content test-content">
+        <!-- Your markup starts here -->
+
+        <h6>Enter number</h6>
+        <br>
+        <input type="number" id="inputNumber">
+        <br>
+        <input type="number" id="testOutput">
+        <button class="button" onclick="displayFactorial()">Show Factorial</button>
+    </main>
+
+    <footer class="footer">
+        <div class="copyright">
+            &copy; IntegrityNet Solutions &amp; Services <script>document.write(new Date().getFullYear())</script> 
+        </div>
+    </footer>
+
+    <script type="module" src="../theme.js"></script>
+
+    <script>
+        // Your script starts here
+
+        function displayFactorial() {
+            var i, num, fact;
+
+            fact = 1;
+            num = Number(document.getElementById('inputNumber').value);
+            for (i = 1; i <= num; i++) {
+                fact *= i;
+            }
+
+            document.getElementById('testOutput').value = fact;
+        }
+    </script>
+</body>
+</html>
